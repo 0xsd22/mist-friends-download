@@ -1,0 +1,10 @@
+{
+  "downloadUrl": "https://github.com/0xsd22/mist-friends-download/releases/latest/download/Mist-Friends-mac.pkg",
+  "minimumMacOS": "13.0",
+  "name": "Mist",
+  "pageUrl": "https://0xsd22.github.io/mist-friends-download/",
+  "platform": "macos",
+  "releasedAt": "2026-05-06T21:20:04Z",
+  "sha256": "46b37089222b6c11b61f9231bfdbf75476aa00b881577a35ae7fae988ebf2ee7",
+  "version": "0.1.1"
+}

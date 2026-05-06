@@ -11,9 +11,22 @@
     <main class="download-page">
       <img class="logo" src="./assets/mist-logo.png" alt="Mist" />
       <h1>Mist for macOS</h1>
-      <a class="download-button" href="https://github.com/0xsd22/mist-friends-download/releases/latest/download/Mist-Friends-mac.pkg">
+      <a id="download-button" class="download-button" href="https://github.com/0xsd22/mist-friends-download/releases/latest/download/Mist-Friends-mac.pkg">
         Download for Mac
       </a>
+      <p id="release-meta" class="release-meta">latest notarized installer</p>
     </main>
+    <script>
+      fetch("./latest.json", { headers: { accept: "application/json" } })
+        .then((response) => response.ok ? response.json() : null)
+        .then((release) => {
+          if (!release) return;
+          const button = document.getElementById("download-button");
+          const meta = document.getElementById("release-meta");
+          if (button && typeof release.downloadUrl === "string") button.href = release.downloadUrl;
+          if (meta && typeof release.version === "string") meta.textContent = `version ${release.version}`;
+        })
+        .catch(() => {});
+    </script>
   </body>
 </html>
