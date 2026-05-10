@@ -80,10 +80,10 @@ a {
 }
 
 .nav-logo {
-  width: 36px;
-  height: 36px;
-  border-radius: 8px;
-  box-shadow: 0 0 18px rgba(167, 192, 128, 0.22);
+  width: 42px;
+  height: auto;
+  filter: hue-rotate(72deg) saturate(0.78) brightness(0.96)
+    drop-shadow(0 0 18px rgba(167, 192, 128, 0.28));
 }
 
 .site-nav,
@@ -128,10 +128,17 @@ main {
     drop-shadow(0 0 44px rgba(167, 192, 128, 0.3));
 }
 
-.wordmark-logo {
-  width: 132px;
-  border-radius: 24px;
-  filter: drop-shadow(0 0 44px rgba(167, 192, 128, 0.24));
+.hero-brand {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.hero-brand span {
+  color: var(--text-strong);
+  font-size: 1.45rem;
+  font-weight: 800;
 }
 
 .eyebrow {
