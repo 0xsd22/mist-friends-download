@@ -135,12 +135,6 @@ main {
   gap: 2px;
 }
 
-.hero-brand span {
-  color: var(--text-strong);
-  font-size: 1.45rem;
-  font-weight: 800;
-}
-
 .eyebrow {
   margin: 28px 0 10px;
   color: var(--accent);

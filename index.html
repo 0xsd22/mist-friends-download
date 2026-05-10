@@ -12,7 +12,7 @@
     <meta property="og:description" content="A private local agent for macOS with secure approval cards and user-controlled connectors." />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="./assets/mist-oauth-logo.png" />
-    <link rel="icon" href="./assets/mist-oauth-logo.png" />
+    <link rel="icon" href="./assets/mist-logo.png" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
@@ -33,7 +33,6 @@
       <section class="hero" id="download" aria-labelledby="hero-title">
         <div class="hero-brand" aria-label="Mist">
           <img class="hero-logo" src="./assets/mist-logo.png" alt="" />
-          <span>Mist</span>
         </div>
         <p class="eyebrow">Private local agent for macOS</p>
         <h1 id="hero-title">Mist works from your computer, with your approval.</h1>
@@ -50,7 +49,7 @@
           </a>
           <a class="secondary-link" href="#security">How privacy works</a>
         </div>
-        <p id="release-meta" class="release-meta">latest notarized installer</p>
+        <p id="release-meta" class="release-meta">version 0.1.8</p>
       </section>
 
       <section class="preview-band" aria-label="Mist product previews">
@@ -217,7 +216,7 @@ ship audited diff</code></pre>
             buttons.forEach((button) => { button.href = release.downloadUrl; });
           }
           if (meta && typeof release.version === "string") {
-            meta.textContent = `version ${release.version} · notarized macOS installer`;
+            meta.textContent = `version ${release.version}`;
           }
         })
         .catch(() => {});
