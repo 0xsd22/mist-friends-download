@@ -3,28 +3,218 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Mist</title>
-    <meta name="description" content="Download Mist for macOS." />
+    <title>Mist | Private local agent for macOS</title>
+    <meta
+      name="description"
+      content="Mist is a private local agent for macOS with approval-based connectors for Gmail, Drive, Calendar, Apple apps, research, coding, dictation, and more."
+    />
+    <meta property="og:title" content="Mist" />
+    <meta property="og:description" content="A private local agent for macOS with secure approval cards and user-controlled connectors." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="./assets/mist-logo.png" />
+    <link rel="icon" href="./assets/mist-logo.png" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <main class="download-page">
-      <img class="logo" src="./assets/mist-logo.png" alt="Mist" />
-      <h1>Mist for macOS</h1>
-      <a id="download-button" class="download-button" href="https://github.com/0xsd22/mist-friends-download/releases/latest/download/Mist-Friends-mac.pkg">
-        Download for Mac
+    <header class="site-header" aria-label="Primary">
+      <a class="brand-link" href="#top" aria-label="Mist home">
+        <img class="nav-logo" src="./assets/mist-logo.png" alt="" />
       </a>
-      <p id="release-meta" class="release-meta">latest notarized installer</p>
+      <nav class="site-nav">
+        <a href="#features">Features</a>
+        <a href="#connectors">Connectors</a>
+        <a href="#security">Security</a>
+        <a href="#download">Download</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" id="download" aria-labelledby="hero-title">
+        <img class="hero-logo" src="./assets/mist-logo.png" alt="Mist" />
+        <p class="eyebrow">Private local agent for macOS</p>
+        <h1 id="hero-title">Mist works from your computer, with your approval.</h1>
+        <p class="hero-copy">
+          Connect Gmail, Drive, Calendar, Apple apps, research, coding, and local memory to one assistant that asks before it acts.
+        </p>
+        <div class="hero-actions">
+          <a
+            id="download-button"
+            class="download-button"
+            href="https://github.com/0xsd22/mist-friends-download/releases/latest/download/Mist-Friends-mac.pkg"
+          >
+            Download for Mac
+          </a>
+          <a class="secondary-link" href="#security">How privacy works</a>
+        </div>
+        <p id="release-meta" class="release-meta">latest notarized installer</p>
+      </section>
+
+      <section class="preview-band" aria-label="Mist product previews">
+        <div class="preview-grid">
+          <article class="app-shot chat-shot" aria-label="Mist chat preview">
+            <div class="window-bar">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="shot-line user-line">Summarize today's Gmail and prep the next steps.</div>
+            <div class="shot-line agent-line">
+              Found 6 useful threads. Two need replies, one calendar conflict, one vendor follow-up.
+            </div>
+            <div class="approval-card">
+              <span class="approval-label">approval required</span>
+              <span>tool: google.gmail.send</span>
+              <span>account: selected Gmail account</span>
+              <span>recipient: Michael</span>
+              <div class="approval-buttons">
+                <span>approve</span>
+                <span>reject</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="app-shot island-shot" aria-label="Floating island preview">
+            <div class="desktop-frame">
+              <div class="floating-island">
+                <img src="./assets/mist-logo.png" alt="" />
+                <div>
+                  <strong>listening</strong>
+                  <span>release fn when done</span>
+                </div>
+              </div>
+              <div class="dock-line"></div>
+            </div>
+          </article>
+
+          <article class="app-shot code-shot" aria-label="Coding agent preview">
+            <div class="window-bar">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <pre><code>$ mist coding task
+read codebase
+patch focused files
+run tests
+ship audited diff</code></pre>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section" id="features" aria-labelledby="features-title">
+        <div class="section-heading">
+          <p class="eyebrow">What it does</p>
+          <h2 id="features-title">A local assistant for daily work.</h2>
+        </div>
+        <div class="feature-grid">
+          <article>
+            <h3>Email and schedule</h3>
+            <p>Read, search, draft, send, summarize, and coordinate around Gmail, Calendar, Docs, Sheets, and Drive when you connect them.</p>
+          </article>
+          <article>
+            <h3>Research and files</h3>
+            <p>Use web research, Exa, local files, browser context, and memory to produce grounded answers and artifacts.</p>
+          </article>
+          <article>
+            <h3>Coding agent</h3>
+            <p>Inspect repositories, make scoped edits, run checks, prepare diffs, and keep work auditable instead of hiding changes.</p>
+          </article>
+          <article>
+            <h3>Memory and workers</h3>
+            <p>Keep structured local memory for preferences, projects, open loops, knowledge, skills, and optional synced worker setup.</p>
+          </article>
+          <article>
+            <h3>Floating island</h3>
+            <p>Open Mist quickly, dictate with a hotkey, and keep the assistant accessible without leaving your current app.</p>
+          </article>
+          <article>
+            <h3>Private model setup</h3>
+            <p>Use Venice or another configured model provider. Mist stays local, and external calls only happen through the connectors and providers you set up.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="connector-band" id="connectors" aria-labelledby="connectors-title">
+        <div class="section-heading">
+          <p class="eyebrow">Connectors</p>
+          <h2 id="connectors-title">Bring your tools, keep control.</h2>
+        </div>
+        <ul class="connector-list" aria-label="Supported connectors">
+          <li>Gmail</li>
+          <li>Google Drive</li>
+          <li>Google Calendar</li>
+          <li>Google Docs</li>
+          <li>Google Sheets</li>
+          <li>Apple Mail</li>
+          <li>Apple Calendar</li>
+          <li>Apple Notes</li>
+          <li>Exa research</li>
+          <li>GitHub CLI</li>
+          <li>Railway CLI</li>
+          <li>Local terminal tools</li>
+          <li>Obsidian memory</li>
+          <li>Venice models</li>
+        </ul>
+      </section>
+
+      <section class="content-section security-section" id="security" aria-labelledby="security-title">
+        <div class="section-heading">
+          <p class="eyebrow">Security model</p>
+          <h2 id="security-title">Mist asks before it touches the outside world.</h2>
+        </div>
+        <div class="security-layout">
+          <div>
+            <p>
+              Mist is designed as a local-first desktop agent. Memory, settings, and connector tokens live on the user's computer unless the user chooses a synced folder or connects an external service.
+            </p>
+            <p>
+              Actions that can affect another person, account, calendar, repository, or service require approval cards with the tool, account, recipient, and action details.
+            </p>
+          </div>
+          <ol class="security-steps">
+            <li>Connect only the services you want.</li>
+            <li>Review approval cards before sends, writes, deletes, installs, or deploys.</li>
+            <li>Use local memory and private model providers where possible.</li>
+            <li>Revoke OAuth access from the provider dashboard at any time.</li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="download-strip" aria-labelledby="download-title">
+        <div>
+          <p class="eyebrow">macOS</p>
+          <h2 id="download-title">Install Mist and connect your tools when you are ready.</h2>
+        </div>
+        <a
+          class="download-button"
+          href="https://github.com/0xsd22/mist-friends-download/releases/latest/download/Mist-Friends-mac.pkg"
+        >
+          Download for Mac
+        </a>
+      </section>
     </main>
+
+    <footer class="site-footer">
+      <span>Mist for macOS</span>
+      <nav aria-label="Legal">
+        <a href="./privacy.html">Privacy Policy</a>
+        <a href="./terms.html">Terms</a>
+      </nav>
+    </footer>
+
     <script>
       fetch("./latest.json", { headers: { accept: "application/json" } })
         .then((response) => response.ok ? response.json() : null)
         .then((release) => {
           if (!release) return;
-          const button = document.getElementById("download-button");
+          const buttons = document.querySelectorAll(".download-button");
           const meta = document.getElementById("release-meta");
-          if (button && typeof release.downloadUrl === "string") button.href = release.downloadUrl;
-          if (meta && typeof release.version === "string") meta.textContent = `version ${release.version}`;
+          if (typeof release.downloadUrl === "string") {
+            buttons.forEach((button) => { button.href = release.downloadUrl; });
+          }
+          if (meta && typeof release.version === "string") {
+            meta.textContent = `version ${release.version} · notarized macOS installer`;
+          }
         })
         .catch(() => {});
     </script>
