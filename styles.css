@@ -68,15 +68,22 @@ a {
 .brand-link {
   display: inline-flex;
   align-items: center;
+  gap: 10px;
   min-width: 44px;
   text-decoration: none;
 }
 
+.brand-link span {
+  color: var(--text);
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+
 .nav-logo {
-  width: 42px;
-  height: auto;
-  filter: hue-rotate(72deg) saturate(0.78) brightness(0.96)
-    drop-shadow(0 0 18px rgba(167, 192, 128, 0.28));
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  box-shadow: 0 0 18px rgba(167, 192, 128, 0.22);
 }
 
 .site-nav,
@@ -119,6 +126,12 @@ main {
   height: auto;
   filter: hue-rotate(72deg) saturate(0.78) brightness(0.96)
     drop-shadow(0 0 44px rgba(167, 192, 128, 0.3));
+}
+
+.wordmark-logo {
+  width: 132px;
+  border-radius: 24px;
+  filter: drop-shadow(0 0 44px rgba(167, 192, 128, 0.24));
 }
 
 .eyebrow {
